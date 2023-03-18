@@ -1,0 +1,156 @@
+            /* <html>
+              <head>
+                <title>${userData.name} ${userData.lastName}</title>
+              </head>
+              <body>
+
+              <style>
+                    body {
+                      font-family: Arial, sans-serif;
+                      font-size: 16px;
+                      line-height: 1.4;
+                      margin: 0;
+                      padding: 0;
+                      
+                    }
+
+                    .container {
+                      display: flex;
+                      flex-direction: row;
+                    }
+
+                    .info {
+                      margin-left: 20px;
+                    }
+
+                    h1 {
+                      font-size: 24px;
+                      margin-bottom: 10px;
+                    }
+
+                    img {
+                      height: auto;
+                      margin-top: 30px;
+                      margin-left:50px;
+                      height: 200px;
+                    }
+
+                    p {
+                      margin-bottom: 10px;
+                    }
+                    .address{
+                      margin-left:650px;
+                      max-width:200px;
+                      margin-top:-300px;
+                      font-size:16px;
+
+                    }
+                    .user{
+                      margin-top:10px
+                    }
+                    .nm{
+                      margin-bottom:-20px;
+                      margin-top:30px
+                    }
+
+                    .info{
+                    margin-top:10px
+
+                    }
+                    .info1{
+                    margin-bottom:-25px;
+                    margin-left:10px
+
+
+                    }
+                    .address1{
+                    margin-bottom:-25px;
+                    margin-top:30px;
+                    margin-left:10px
+
+                    }
+                    .company{
+                    margin-bottom:-15px;
+                    margin-top:30px;
+                    } 
+
+                    .friends {
+                    font-size: 16px;
+                    padding: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    margin: 10px;
+                    display: flex; // Add this line to make the friends display side by side
+                    flex-wrap: wrap; // Add this line to wrap the friends if they exceed the width of the container
+                    }
+
+                    .name2 {
+                    margin-bottom: 252px; // Remove this line if you want the friends to display side by side
+                    }
+
+                    .img2 {
+                    height: 200px;
+                    margin-left: 10px; // Change the margin to 10px to give some space between friends
+                    object-fit: cover;
+                    }
+
+                    .title1 {
+                    margin-top: 50px;
+                    margin-left: 0px; // Add this line to align the title with the friend's name and image
+
+                    }
+              </style>
+                <div class="container">
+                  <img src="${userData.imageUrl}" alt="${userData.name}">
+                  
+                  <div class="info">
+                    <div class="user">
+                      <p class="info1">info</p>
+                      <h3 class="nm">${userData.prefix} ${userData.name} ${
+            userData.lastName
+          }</h1>
+                      <p class="title">${userData.title}</P>
+                      <p>Email: ${userData.email}</p>
+                      <p>Ip Address: ${userData.ip}</p>
+                      <p>Job Area: ${userData.jobArea}</p>
+                      <p>Job Type: ${userData.jobType}</p>
+                      <p>Job Description: ${userData.jobDescriptor}</p>
+                    </div>
+                    <div class="address">
+                      <p class="address1">address</p>
+                      <h3 class="company">${userData.company.name}</h1>
+                      <p>City: ${userData.address.city}</p>
+                      <p>Country: ${userData.address.country}</p>
+                      <p>State: ${userData.address.state}</p>
+                      <p>Street Address: ${userData.address.streetAddress}</p>
+                      <p>ZIP: ${userData.address.zipCode}</p>
+                    </div>
+                  </div>
+                  <p>Friends:</p>
+                  <div class="friends">
+                    <ul class=""friends1>
+                    <div class="friends">
+                    ${friendsData.list
+                      .map(
+                        (friend) => `
+                          <div class="friend-container">
+                            <img src="${friend.imageUrl}" alt="${friend.name}">
+                            <h4>${friend.prefix} ${friend.name} ${friend.lastName}</h4>
+                            <p>${friend.title}</p>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                  
+                    </ul>
+                  </div>
+                </div>
+              </body>
+            </html>
+           */
